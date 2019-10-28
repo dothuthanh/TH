@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">1
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" wdith="2000" height="500" style="border:1px solid #000000;"></canvas>
+<script>
+    let Rectangle = function (width,height) {
+        this.width = width;
+        this.height = height;
+    };
+    Rectangle.prototype.getWidth = function () {
+        return this.width;
+    };
+    Rectangle.prototype.getHeight = function () {
+        return this.height;
+    };
+    Rectangle.prototype.setRectangle = function (width, height) {
+        this.width;
+        this.height;
+    };
+    Rectangle.prototype.calAreaRectangle = function () {
+        return this.width * this.height;
+    };
+    Rectangle.prototype.calPerimetersRectangle = function () {
+        return (this.width + this.height) * 2;
+    };
+    Rectangle.prototype.drawRectangle = function () {
+        let hcn = document.getElementById("Rectangle");
+        let ctx = hcn.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineWidth = '3';
+        ctx.lineTo(this.width,0);
+        ctx.lineTo(this.width,this.height);
+        ctx.lineTo(0,this.height);
+        ctx.lineTo(0,0);
+        ctx.strokeStyle = 'blue';
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0,0,this.width,this.height);
+        ctx.strke();
+    };
+</script>
+</body>
+</html>
